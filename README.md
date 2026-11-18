@@ -2,6 +2,8 @@
 
 Minimal repro. `App.tsx` configures the session with expo-audio, plays audio, and mounts a muted, looping `VideoView`. A local module (`modules/session-probe`) shows `AVAudioSession` category / mode / options on screen every 500 ms and logs each change.
 
+Reproduced on an iPhone 13 mini (iOS 27.2.1, Release build) with expo 57.0.33, expo-video 57.0.5 and expo-audio 57.0.5. expo-video 58.0.14 and `main` apply the same rule in `AudioSessionPolicy.evaluate`.
+
 ## Run
 
 ```sh
